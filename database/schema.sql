@@ -39,7 +39,7 @@ CREATE TABLE audit_logs (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     action VARCHAR(50) NOT NULL,
-    table_name VARCHAR(50) NOT NULL,
+    table_name VARCHAR(50) NOT NULL,    
     record_id INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
