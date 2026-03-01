@@ -9,11 +9,6 @@ const { allowRoles } = require('../middleware/roleMiddleware');
 router.post('/login', loginUser);
 
 // Register (admin only)
-router.post(
-    '/register',
-    authenticateToken,
-    allowRoles('admin'),
-    registerUser
-);
+router.post('/register', authenticateToken, allowRoles('admin'), registerUser);
 
 module.exports = router;
